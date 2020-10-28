@@ -2,11 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>{% block title %}{% block page_title '' %} | {% block site_title 'French Destock' %}{% endblock %}</title>
+        {{ encore_entry_link_tags('app') }}
+        {% block stylesheets '' %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block body '' %}
+
+        {{ encore_entry_script_tags('app') }}
+        {% block javascripts '' %}
     </body>
 </html>
